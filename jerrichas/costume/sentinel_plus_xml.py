@@ -96,7 +96,7 @@ class SentinelPlusXML(BaseCostumeSave):
         """
         super()
         assert(0 <= costume_id <= 9)
-        if self.costume_map_list.__len__ > costume_id:
+        if self.costume_map_list.__len__ < costume_id + 1:
             raise IndexError
 
         nth_map = self.costume_map_list[costume_id]
@@ -114,7 +114,7 @@ class SentinelPlusXML(BaseCostumeSave):
         """
         super()
         assert(0 <= costume_id <= 9)
-        if self.costume_map_list.__len__ > costume_id:
+        if self.costume_map_list.__len__ - 1 < costume_id + 1:
             raise IndexError
 
         nth_map = self.costume_map_list[costume_id]
